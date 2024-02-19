@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rash Driving Behavior Monitoring System</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+  <!-- ... (Previous HTML code) ... -->
+<!-- ... (Previous HTML code) ... -->
+<header class="header">
+  <img src="images\Logo1.png" class="logo">
+  <h1>Sentinel Drive: Innovating Road Safety System</h1>
+  <button class="header-button" onclick="openLoginModal()">Login</button>
+</header>
+
+  <!-- Modal for Login -->
+  <div id="loginModal" class="modal">
+    <div class="video-container">
+      <!-- <video src="background.mp4" autoplay muted loop id="myvideo"></video> -->
+      <div background="red">
+        
+      </div>
+  </div> 
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Please Login Here</h2>
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit" class="btn btn2">Login</button>
+      </form>
+      <div id="loginMessage"></div> <!-- Display login messages -->
+    </div>
+  </div>
+  
+  <!-- ... (Remaining HTML code) ... -->
+  
+  
+  <!-- ... (Remaining HTML code) ... -->
+  
+
+<main>
+    <section id="about">
+      <h2>About the Project</h2>
+      <p>The project 'Sentinel Drive' aims to revolutionize road safety by leveraging intelligent vehicle vigilance. Through the integration of cutting-edge technologies like AI, computer vision, and sensors, this initiative creates a responsive road safety ecosystem. Vehicles equipped with advanced computer vision algorithms and real-time sensor data can identify and prevent potential risks, ensuring the safety of all road users.<br>
+      Predictive analytics further enable vehicles to anticipate hazards and proactively adjust their behaviour. Through real-time data analysis, predictive analytics, and collaborative efforts across multiple disciplines, Sentinel Drive seeks to establish a safer road environment for all, redefining the role of vehicles as vigilant partners in safeguarding lives and preventing accidents.
+      The base feature is rash Driving detection, and Additional features are alcohol detection, seat-belt detection, etc. We are monitoring the Driver’s behaviour as the alert goes to officials. All data will saved on the Cloud with the help of deep learning. It obligates everyone to wear seat belts and obey traffic rules to increase the safety of individuals with the help of Innovative Road Safety through Intelligent Vehicle Vigilance and a deep learning a algorithm, embedded in Raspberry Pi. In addition to this, all the picture and video saved on a database that is only accessed by higher government officials for future security purposes and irresponsibility of law enforcement officials and Common citizens.
+        </p>
+      <h3>Objectives of our project</h3>
+      <p>•	To develop an integrated automotive safety solution for enhanced Driver and passenger protection.<br>
+      •	To create a system that monitors vehicle and road conditions in real-time, providing instant alerts and responses to potential dangers.<br>
+      •	To design features that encourage responsible Driving behaviour, such as alerts for speeding, lane departure, and other risky actions.</p>
+    </section>
+  <!-- ... (Remaining HTML code) ... -->
+<!---------------------------FEATURES----------------------------->
+<section class="feature" id="feature">
+  <h1 class="heading"><span>F</span>eatures <span>O</span>f <span>O</span>ur <span>P</span>roject</h1>
+  <div class="card-container">
+    <div class="card">
+      <img src="images/Accident-1.png" alt="">
+      <div class="content">
+        <h3 class="title">Accident Detection</h3>
+        <p>This system is to identify abnormal events on the road using:<br>
+          various sensors like Accelerometers, IR, Vibration, GPS & GSM Technology<br>
+          This helps to road reduce accidents.</p>
+      </div>
+    </div>
+  
+
+    <div class="card">
+      <img src="images/Rash-driving1.png" alt="">
+      <div class="content">
+        <h3 class="title">RashDriving Detection</h3>
+        <p>By monitoring driver is rash driving or not, rash driving also be detected by continuously Lane changing.<br>
+           Accelerometer helps to detect sharp turns, Rapid changes in velocity.<br></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/alcohol-1.png" alt="">
+      <div class="content">
+        <h3 class="title">Alcohol Detection</h3>
+        <p>By Alcohol Detector sensor we analyze drivers condition of consumed alcohol or not.
+        This helps to avoid cab driver to drink and drive. This also reduces complexity on road.</p>
+      </div>
+    </div>
+  
+
+  <div class="card">
+    <img src="images/seatbelt-1.png" alt="">
+    <div class="content">
+      <h3 class="title">SeatBelt detection</h3>
+      <p>Seat-belt weared or not is detected using seat-belt detector sensor,<br>
+      Or we can detect using camera module by image processing.This increases chances to save driver.</p>
+    </div>
+  </div>
+
+</div>
+</section>
+<!----------------Gallery----------------------------->
+<div class="container-gallery">
+  <h1 class="heading"><span>I</span>mage <span>G</span>allery</h1>
+  <div class="gallery">
+    <img src="images/background-1.png">
+    <div class="desc">Add a description of the image Here</div>
+  </div>
+
+  <div class="gallery">
+    <img src="images/background-1.png">
+    <div class="desc">Add a description of the image Here</div>
+  </div>
+
+  <div class="gallery">
+    <img src="images/background-1.png">
+    <div class="desc">Add a description of the image Here</div>
+  </div>
+
+  <div class="gallery">
+    <img src="images/background-1.png">
+    <div class="desc">Add a description of the image Here</div>
+  </div>
+
+  <div class="gallery">
+    <img src="images/background-1.png">
+    <div class="desc">Add a description of the image Here</div>
+  </div>
+
+  <div class="gallery">
+    <img src="images/background-1.png">
+    <div class="desc">Add a description of the image Here</div>
+  </div>
+</div>
+<!----------------FAQ--------------------------------->
+<section class="wrapper" id="wrapper">
+  <h1>FAQ<br>Frequently Asked Questions</h1>
+
+  <div class="faq">
+    <button class="accordion">
+      How does the system detect rash driving behavior?
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="pannel">
+      <p>
+        The system analyzes accelerometer data to identify instances of rash driving, such as sudden accelerations, decelerations, or abrupt turns. It then generates alerts to notify the vehicle owner or authorities in real-time.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="accordion">
+      Can the system differentiate between minor bumps and serious accidents?
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="pannel">
+      <p>
+        Yes, the system is equipped with algorithms that differentiate between minor bumps and serious accidents, ensuring that emergency contacts and relevant authorities are only alerted in the case of severe incidents.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="accordion">
+      How secure is the transmission of data to the central database?
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="pannel">
+      <p>
+        The system ensures secure data transmission using reliable communication modules like cellular modems. It also implements encryption and access control for data security.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="accordion">
+      Is there a user interface for monitoring vehicle status and driver behavior?
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="pannel">
+      <p>
+        Yes, the system provides a user interface, which could be in the form of a web-based dashboard or a mobile app, allowing vehicle owners or fleet managers to monitor vehicle status, driver behavior, and incident alerts.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="accordion">
+      How does the system contribute to road infrastructure enhancement?
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="pannel">
+      <p>
+        By deploying sensors and monitoring systems on roadways, the system contributes to improving road infrastructure by providing real-time information about road conditions, traffic congestion, and potential hazards.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="accordion">
+      How does the system handle emergency medical response
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="pannel">
+      <p>
+        The system enhances the accident detection feature to automatically notify medical services and hospitals about accidents, ensuring quicker response times and appropriate actions.
+      </p>
+    </div>
+  </div>
+</section>
+  <footer>
+    <p>&copy; 2023 Sentinel Drive: Innovating Road Safety System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
