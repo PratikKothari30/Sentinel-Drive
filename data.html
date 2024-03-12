@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <title>Data Analysis</title>
+  <link rel="stylesheet" href="styledata.css">
+  <link rel="stylesheet" href="newstyle.css">
+</head>
+<body>
+  <header>
+    <h1>Data Analysis Dashboard</h1>
+    <button class="logout-button" onclick="handellogout()">Logout</button>
+  </header>
+
+  <main>
+    <section id="dataDisplay">
+      <h2>Collected Data</h2>
+      <p>Data visualization elements will be displayed here.</p><br>
+      
+      <div class="table-responsive">
+        <div class="container">
+          <!-- Table -->
+          <table class="table">
+            <thead id="table-head"></thead>
+            <tbody id="table-body"></tbody>
+          </table>
+          <!-- Table -->
+        </div>
+      </div>
+      <!-- Display dataset elements here -->
+        <!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTrieLStwVLpTy_wfQlKXP7v6p5AUJdIacPwxngTBMg9QBBMAsaXzCC2_UilSlJ9OEt5WSTk6A6cTFa/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style= "height:300px; width:855px;"></iframe> -->
+      
+    </section>
+
+    <!-- <section id="algorithmAnalysis">
+      <h2>Algorithmic Analysis</h2>
+      <form id="algorithmForm">
+        <label for="selectedData">Select Data:</label>
+       
+        <select id="selectedData" name="selectedData">
+          <option value="data1">Data Set 1</option>
+          <option value="data2">Data Set 2</option>
+          <option value="data3">Data Set 3</option>
+        </select><br><br>
+        <input type="submit" value="Run Algorithm">
+      </form>
+      <div id="algorithmResult">
+       
+        <p>Algorithm result will be displayed here after analysis.</p>
+      </div>
+    </section> -->
+
+    <!-- <section id="viewData">
+      <h2>View Data</h2>
+      <canvas id="dataChart" width="400" height="200"></canvas>
+    </section>
+
+    <section id="uploadData">
+      <h2>Upload Data</h2>
+      <form id="uploadForm">
+        <input type="file" id="fileInput" accept=".csv, .txt" required>
+        <input type="submit" value="Upload">
+      </form>
+    </section> -->
+
+    <!-- <section id="applyAlgorithms">
+      <h2>Apply Algorithms</h2>
+      <button id="runAlgorithm">Run Algorithm</button>
+      <div id="algorithmResult">
+        
+      </div>
+    </section>
+  </main> -->
+
+  <script>
+     src="scripts.js"
+  </script>
+</body>
+<script src="https://apis.google.com/js/api.js"></script>
+<!-- easyData -->
+<script type="text/javascript" src="easyData-google-sheets.js"></script>
+<script src="newscript.js"></script>
+<script>
+  
+function handellogout(){
+  window.location.href = "index.html"; 
+  alert("Logout Successfull!!")
+}
+
+</script>
+
+<script>
+  {
+    {
+      // Your API KEY
+      const API_KEY = "AIzaSyA8H1OP5FP-ttkjfBztGJKRkHRmzuCyU7k";
+
+      function displayResult2(response) {
+        let tableHead = "";
+        let tableBody = "";
+
+        response.result.values.forEach((row, index) => {
+          if (index === 0) {
+            tableHead += "<tr>";
+            row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+            tableHead += "</tr>";
+          } else {
+            tableBody += "<tr>";
+            row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+            tableBody += "</tr>";
+          }
+        });
+
+        document.getElementById("table-head").innerHTML = tableHead;
+        document.getElementById("table-body").innerHTML = tableBody;
+      }
+
+      function loadData() {
+        // Spreadsheet ID
+        const spreadsheetId = "19R0LcMsLck38CeZYrdy8IMOAX_USZrfyRIKea5BEfxQ";
+        const range = "A:Z";
+        getPublicValues({ spreadsheetId, range }, displayResult2);
+      }
+
+      window.addEventListener("load", (e) => {
+        initOAuthClient({ apiKey: API_KEY });
+      });
+
+      document.addEventListener("gapi-loaded", (e) => {
+        loadData();
+      });
+    }
+  }
+</script>
+</html>
